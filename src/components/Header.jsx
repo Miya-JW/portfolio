@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className=" top-5 left-0 right-0 z-50 bg-dark]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pt-4">
         <nav className="flex items-center justify-between h-16">
           <Link to="/" className="h-20">
             <img src={logo} alt="Miya Wu Logo" className="h-full" />
