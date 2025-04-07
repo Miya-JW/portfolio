@@ -1,0 +1,30 @@
+.bg-dark{
+    background-color: var(--background-color-dark);
+}
+
+.bg-grey{
+    background-color: var(--color-grey);
+}
+
+.text-light{
+    color: var(--font-color-light);
+}
+
+.text-dark{
+    color: var(--font-color-dark);
+}
+
+.color-dark-yellow-linear{
+    background: linear-gradient(270deg, #594915 3.5%, #99802E 47.5%, #FFD54D 100%);
+    -webkit-background-clip: text; /* 兼容 Chrome、Safari、Opera */
+    background-clip: text;         /* 标准属性 */
+    color: transparent;            /* 使文字颜色透明，让背景显示出来 */}
+
+.color-light-yellow-linear{
+    background: var(--color-light-yellow-linear);
+     -webkit-background-clip: text; /* 兼容 Chrome、Safari、Opera */
+    background-clip: text;         /* 标准属性 */
+    color: transparent;            /* 使文字颜色透明，让背景显示出来 */
+}
+
+

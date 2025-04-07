@@ -1,7 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/imgs/logo.svg';
 
 const Header = () => {
   const location = useLocation();
+
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
@@ -13,29 +15,29 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md">
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-gray-800">
-            Miya Wu
+    <header className=" top-5 left-0 right-0 z-50 bg-dark]">
+      <div className="container mx-auto px-4">
+        <nav className="flex items-center justify-between h-16">
+          <Link to="/" className="h-20">
+            <img src={logo} alt="Miya Wu Logo" className="h-full" />
           </Link>
-          <div className="hidden md:flex space-x-6">
+          <div className="flex space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`${
+                className={`text-light font-['Proxima_Nova'] font-normal text-base px-3 py-1 rounded-md transition-colors ${
                   location.pathname === link.path
-                    ? 'text-blue-600'
-                    : 'text-gray-600 hover:text-blue-600'
-                } transition-colors duration-200`}
+                    ? 'bg-grey'
+                    : ''
+                }`}
               >
                 {link.label}
               </Link>
             ))}
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };
