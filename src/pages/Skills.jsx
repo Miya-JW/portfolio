@@ -1,4 +1,4 @@
-import Footer from '../components/Footer';
+
 import Language from '../assets/skill/language.svg';
 import Line from '../assets/skill/line.svg';
 import SkillsImg from '../assets/skill/skills.svg';
@@ -13,7 +13,7 @@ const Skills = () => {
         <img src={Line} alt="Line" className='mt-40'  />
         <img src={SkillsImg} alt="Skills" className='mt-40' />
       </div>
-      <Footer />
+   
     </div>
   );
 };
