@@ -9,7 +9,7 @@ const Footer = () => {
         { path: '/about', label: 'About' },
         { path: '/learn', label: 'Learn' },
         { path: '/skills', label: 'Skills' },
-        { path: '/projects', label: 'Projects' },
+        { path: '/projects/uiux-overview', label: 'Projects' },
         { path: '/resume', label: 'Resume' },
         { path: '/contact', label: 'Contact' },
     ];
@@ -25,17 +25,18 @@ const Footer = () => {
                         <Link
                             key={link.path}
                             to={link.path}
-                            className={`font-['Proxima_Nova'] text-base ${
-                                location.pathname === link.path
+                            className={`font-['Proxima_Nova'] text-base ${(location.pathname.startsWith('/projects') && link.label === 'Projects') || location.pathname === link.path
                                     ? 'underline'
                                     : 'hover:text-[var(--font-color-light)]'
-                            }`}
+                                }`}
                         >
                             {link.label}
                         </Link>
                     ))}
                 </nav>
+
             </div>
+
         </footer>
     );
 };

@@ -9,7 +9,7 @@ const Header = () => {
     { path: '/about', label: 'About' },
     { path: '/learn', label: 'Learn' },
     { path: '/skills', label: 'Skills' },
-    { path: '/projects', label: 'Projects' },
+    { path: '/projects/uiux-overview', label: 'Projects' },
     { path: '/resume', label: 'Resume' },
     { path: '/contact', label: 'Contact' },
   ];
@@ -26,11 +26,10 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-light font-['Proxima_Nova'] font-normal text-base px-3 py-1 rounded-md transition-colors ${
-                  location.pathname === link.path
+                className={`text-light font-['Proxima_Nova'] font-normal text-xl px-3 py-1 rounded-md transition-colors ${(location.pathname.startsWith('/projects') && link.label === 'Projects') || location.pathname === link.path
                     ? 'bg-grey'
                     : ''
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
