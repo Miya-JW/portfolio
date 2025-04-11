@@ -1,4 +1,4 @@
-import Footer from '../components/Footer';
+
 import AboutMe from '../assets/about/about.svg';
 import Geo from '../assets/about/geo.svg';
 import GeoMap from '../assets/about/geo_map.svg';
@@ -21,7 +21,7 @@ const About = () => {
       <img src={Line2} alt="Line Map" className='mt-40'/>
       <img src={Obsession} alt="Obsession" className='mt-20'/>
       </div>
-      <Footer />
+   
     </div>
   );
 };

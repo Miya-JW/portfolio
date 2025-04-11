@@ -8,6 +8,8 @@
 
 .text-light{
     color: var(--font-color-light);
+    line-height: 28px; /* 155.556% */
+letter-spacing: 1.98px;
 }
 
 .text-dark{

@@ -6,7 +6,7 @@ import obssesion from '../assets/imgs/home_obssesion.svg';
 import latest_work from '../assets/imgs/home_latest_work.svg';
 import solar from '../assets/imgs/home_solar.svg';
 import maori from '../assets/imgs/home_maori.svg';
-import Footer from '../components/Footer';
+
 
 const Home = () => {
     return (
@@ -35,7 +35,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+   
         </div>
     );
 };
