@@ -47,14 +47,14 @@ const TalentBox = () => {
     };
 
     return (
-        <div className="flex justify-between p-8 bg-dark text-light mt-32">
+        <div className="flex flex-row mt-0 md:flex-row justify-between p-8 bg-dark text-light md:mt-32 md:-ml-56">
             {/* First Column - Talent List */}
-            <div className="w-1/4 flex flex-col mt-4 space-y-12 items-end text-2xl">
+            <div className="w-1/4 text-sm  flex flex-col items-end md:w-1/3 md:text-2xl space-y-12">
                 {Object.keys(talents).map((talent) => (
                     <button
                         key={talent}
                         onClick={() => setSelectedTalent(talent)}
-                        className={`text-left hover:text-gray-300 transition-colors ${
+                        className={`text-right hover:text-gray-300 transition-colors ${
                             selectedTalent === talent ? 'underline' : ''
                         }`}
                     >
@@ -64,7 +64,7 @@ const TalentBox = () => {
             </div>
 
             {/* Second Column - Image */}
-            <div className="w-1/3 flex items-center justify-center ">
+            <div className="hidden md:flex w-1/3 items-center justify-center">
                 <img 
                     src={talents[selectedTalent].image} 
                     alt={selectedTalent}
@@ -73,10 +73,12 @@ const TalentBox = () => {
             </div>
 
             {/* Third Column - Description */}
-            <div className="w-1/3 text-light flex items-center justify-center text-[22px]">
-                <p className=" leading-relaxed">
-                    {talents[selectedTalent].description}
-                </p>
+            <div className="w-3/4 text-[13px] ml-4 md:w-1/3  text-light  flex items-center justify-center text-[18px] md:text-[22px]">
+                <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-lg p-4">
+                    <p className="leading-relaxed">
+                        {talents[selectedTalent].description}
+                    </p>
+                </div>
             </div>
         </div>
     );
