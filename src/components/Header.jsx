@@ -27,12 +27,12 @@ const Header = () => {
         <Link to="/" className="h-20">
           <img src={logo} alt="Miya Wu Logo" className="h-full" />
         </Link>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex md:space-x-0 lg:space-x-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-light font-['Proxima_Nova'] font-normal text-xl px-3 py-1 rounded-md transition-colors ${(location.pathname.startsWith('/projects') && link.label === 'Projects') || location.pathname === link.path
+              className={`text-light font-['Proxima_Nova'] font-normal md:text-l lg:text-2xl px-3 py-1 rounded-md transition-colors ${(location.pathname.startsWith('/projects') && link.label === 'Projects') || location.pathname === link.path
                   ? 'bg-grey'
                   : ''
                 }`}
